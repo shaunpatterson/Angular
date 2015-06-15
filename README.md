@@ -11,9 +11,11 @@ This skeleton was created with the Yeoman [gulp-angular](https://github.com/Swii
 
 ### Getting up and running:
 
- - Clone this repository ([instructions](https://help.github.com/articles/fork-a-repo/))
  - Install [Node and NPM](https://nodejs.org/)
- - run `npm install -g gulp` to install gulp globally on your machine
+ - Run `npm install -g gulp bower` to install gulp and bower on your machine
+ - Clone this repository ([instructions](https://help.github.com/articles/fork-a-repo/)) and navigate to the checked out directory
+ - Run `npm install`
+ - Run `bower install`
  - Run `gulp` to build the project
  - In one terminal window, run `gulp watch` to launch a watcher to recompile source files as they change
  - In a separate terminal window, run `gulp serve` to launch the web server, which should open up the skeleton app at http://localhost:3000
