@@ -23,7 +23,12 @@ This skeleton was created with the Yeoman [gulp-angular](https://github.com/Swii
  - Push your story branch to your fork
  - Issue a [pull request](https://help.github.com/articles/using-pull-requests/) against this repo's master branch
 
-### Assignments
+#### Notes/Troubleshooting
+
+ - The Lo-Dash library has been included via the `angular-lodash-wrapper` bower package, and can be included via DI by just using `_`.  Feel free to use this library but do not incorporate any additional third party libraries for the assignment.
+ - If you add any new files during the process, it is safest to restart both the `gulp watch` and `gulp serve` processes, and additionally run a `gulp build`
+
+### Commit Style
 
 Please perform each step in sequence, and commit them individually.  You are free to do smaller commits along the way, but just indicate in the commit message which commit contain the finished code for each step.  For example, the following flow would be fine:
 
@@ -37,11 +42,11 @@ Please perform each step in sequence, and commit them individually.  You are fre
 
 ### Steps
 
- 1. Create a `Products` service in a new file (`products.service.js`) and implement a `getProducts()` method that fetches the `data/products.json` file using Angular's `$http` service.  The function should return a promise resolved with the products array, or rejected with a string error message.
- 2. On the products page, render a simple unordered list of products using the `Products.getProducts()` method.  This should just be one line per product of "[styleNumber] - [displayName]".  Do not worry about any styling in this step.
+ 1. Create a `ProductsSvc` service in a new file (`products.service.js`) and implement a `getProducts()` method that fetches the `data/products.json` file using Angular's `$http` service.  The function should return a promise resolved with the products array, or rejected with a string error message.
+ 2. On the products page, render a simple unordered list of products using the `ProductsSvc.getProducts()` method.  This should just be one line per product of "[styleNumber] - [displayName]".  Do not worry about any styling in this step.
  3. Enhance the product display by creating a `<product product="productObject">` directive (new file `product.directive.js`) that can render a product according to the styles shown in the sample image below.  Do not focus on pixel perfect styles or different fonts, just worry about bold, italics, etc.  Feel free to use the bundled foundation grid system, via standard CSS classes or via SCSS mixins, or to write your own CSS styles.  Do not worry about the Remove button functionality in this step.
- 4. Enhance the `Products.getProducts()` method to cache the resulting products and return the cached copy for the duration of the app.
- 5. Add a `Products.removeProduct(id)` method that will remove a given product from the cached product data, and wire it up to the remove button.
+ 4. Enhance the `ProductsSvc.getProducts()` method to cache the resulting products and return the cached copy for the duration of the app.
+ 5. Add a `ProductsSvc.removeProduct(id)` method that will remove a given product from the cached product data, and wire it up to the remove button.
 
 ##### Sample product styling:
 
