@@ -19,7 +19,7 @@ This skeleton was created with the Yeoman [gulp-angular](https://github.com/Swii
  - Run `gulp` to build the project
  - In one terminal window, run `gulp watch` to launch a watcher to recompile source files as they change
  - In a separate terminal window, run `gulp serve` to launch the web server, which should open up the skeleton app at http://localhost:3000
- - Implement the steps outlined below in a branch.  Use incremental commits as possible to show how you arrived at your solution
+ - Implement the steps outlined below in a branch.  Use incremental commits where possible to show how you arrived at your solution
  - Push your story branch to your fork
  - Issue a [pull request](https://help.github.com/articles/using-pull-requests/) against this repo's master branch
 
