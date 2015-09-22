@@ -1,7 +1,15 @@
-'use strict';
+(function() {
+    'use strict';
 
-angular.module('angularInterview')
-  .controller('ProductsCtrl', function ($scope) {
-    $scope.title = 'Angular Developer Interview Skeleton';
-    $scope.subtitle = 'Implement your products list on this page...';
-  });
+    angular
+        .module('angularDeveloper')
+        .controller('ProductsController', ProductsController);
+
+    /** @ngInject */
+    function ProductsController() {
+        var vm = this;
+
+        vm.title = "Angular Developer Interview Skeleton";
+        vm.subtitle = "Implement your products list on this page...";
+    }
+})();

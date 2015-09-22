@@ -1,22 +1,15 @@
-'use strict';
+(function() {
+  'use strict';
 
-describe('controllers', function(){
-  var scope;
+  describe('controllers', function(){
 
-  beforeEach(module('angularInterview'));
+    beforeEach(module('angularDeveloper'));
 
-  beforeEach(inject(function($rootScope) {
-    scope = $rootScope.$new();
-  }));
+    it('should define more than 5 awesome things', inject(function($controller) {
+      //var vm = $controller('ProductsController');
 
-  it('should define a title', inject(function($controller) {
-    expect(scope.title).toBeUndefined();
-
-    $controller('ProductsCtrl', {
-      $scope: scope
-    });
-
-    expect(typeof scope.title).toBe('string');
-    expect(scope.title.length > 0).toBe(true);
-  }));
-});
+      //expect(angular.isArray(vm.awesomeThings)).toBeTruthy();
+      //expect(vm.awesomeThings.length > 5).toBeTruthy();
+    }));
+  });
+})();
