@@ -1,19 +1,14 @@
 <div class="container">
 
-  <div class="row">
-    <div class="small-12 small-text-center columns">
-        <h3>{{products.title}}</h3>
-        <h4>{{products.subtitle}}</h4>
+    <div class="row">
+        <div class="small-12 small-text-center columns">
+                <h3>{{products.title}}</h3>
+                <h4>{{products.subtitle}}</h4>
+        </div>
     </div>
-  </div>
 
-  This is a test
-
-  <div class="row">
-    <div class="small-12 columns">
-
-      <!-- INSERT PRODUCT LIST HERE -->
-
+    <div class="row" ng-repeat="p in products.products">
+        <div class="small-1 columns">{{p.styleNumber}}</div>
+        <div class="small-8 columns">{{p.displayName}}</div>
     </div>
-  </div>
 </div>
