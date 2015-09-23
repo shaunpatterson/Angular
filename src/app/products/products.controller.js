@@ -11,6 +11,8 @@
 
         vm.title = "Angular Skeleton";
         vm.subtitle = "Implement your products list on this page...";
+        vm.getProducts = getProducts;
+        vm.removeProduct = removeProduct;
 
         activate();
 
@@ -22,10 +24,15 @@
         }
 
         function getProducts() {
+            $log.info("Getting products");
             return ProductsService.getProducts().then(function(data) {
                 vm.products = data;
                 return vm.products;
             });
+        }
+
+        function removeProduct(product) {
+            vm.products = ProductsService.removeProduct(product.id);
         }
     }
 })();
