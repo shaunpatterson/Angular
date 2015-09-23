@@ -4,11 +4,16 @@
         <div class="small-12 small-text-center columns">
                 <h3>{{products.title}}</h3>
                 <h4>{{products.subtitle}}</h4>
+
+                <input ng-model="vm.searchQuery"></input>
         </div>
     </div>
 
-
-    <div ng-repeat="p in products.products">
-        <ad-product product="p" remove="products.removeProduct(product)"></ad-product>
+    <div class="row">
+        <div class="twelve columns">Displaying {{results.length}} of {{products.products.length}}</div>
     </div>
+    <div ng-repeat="p in products.products | filter: {displayName : vm.searchQuery} as results">
+        <ad-product product="::p" remove="products.removeProduct(product)"></ad-product>
+    </div>
+
 </div>
