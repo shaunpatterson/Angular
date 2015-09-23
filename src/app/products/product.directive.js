@@ -15,8 +15,10 @@
             scope: {
                 product: '='
             },
-            templateUrl: 'app/products/product.directive.view.html'
+            templateUrl: 'app/products/product.directive.view.html',
+            compile: compile
         };
+        return directive;
 
         /* @ngInject */
         function ProductController() {
@@ -24,7 +26,10 @@
             // I do nothing
         }
 
-        return directive;
+        function compile(element, attrs, transclude) {
+            element.addClass('product');
+        }
+
     }
 
 })();

@@ -1,2 +1,32 @@
-<div class="small-1 columns">{{vm.product.styleNumber}}</div>
-<div class="small-8 columns">{{vm.product.displayName}}</div>
+<div class="product-image small-2 columns">
+    <img ng-src="{{vm.product.image}}"></img>
+</div>
+
+<div class="small-6 columns desc-pane">
+    <div class="row">
+        <span class="display-name twelve columns">{{vm.product.displayName}}</span>
+    </div>
+    <div class="row">
+        <div class="style-number twelve columns">STYLE: {{vm.product.styleNumber}}</div>
+    </div>
+    <div class="row">
+        <div class="price twelve columns">{{vm.product.totalPrice | currency }}</div>
+    </div>
+</div>
+
+<div class="small-4 columns options-pane">
+    <div class="row">
+        <span class="twelve columns">color: <span class="bold">{{vm.product.color}}</span></span>
+    </div>
+    <div class="row">
+        <span class="twelve columns">size: <span class="bold">{{vm.product.size}}</span></span>
+    </div>
+    <div class="row">
+        <span class="twelve columns">quantity: <span class="bold">{{vm.product.quantity}}</span></span>
+    </div>
+    
+    <div class="row">
+        <a href="#" class="action">Remove</a>
+    </div>
+
+</div>

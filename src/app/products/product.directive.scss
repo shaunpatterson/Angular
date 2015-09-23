@@ -1,0 +1,45 @@
+.product .desc-pane {
+    color: #828282;
+}
+
+.product .desc-pane .display-name {
+    font-family: "Hoefler Text","Baskerville","Baskerville old face",Garamond,"Times New Roman",serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-style: italic;
+}
+
+
+.product .desc-pane .style-number {
+    font-family: Verdana,Arial,Helvetica,Sans-serif;
+    font-size: 11px;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.product .desc-pane .price {
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18.8px;
+    color: rgb(61, 61, 61);
+}
+
+.product .options-pane {
+    padding: 1.4rem;
+    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    background: rgb(245, 244, 239);
+}
+
+.product .options-pane .action {
+    color: rgb(204, 51, 102);
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.product .bold {
+    font-weight: bold;
+}
