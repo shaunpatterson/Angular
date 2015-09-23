@@ -13,17 +13,15 @@
             controllerAs: 'vm',
             restrict: 'EA',
             scope: {
-                product: '='
+                product: '=',
+                remove: '&'
             },
             templateUrl: 'app/products/product.directive.view.html'
         };
         return directive;
 
         /* @ngInject */
-        function ProductController() {
-            var vm = this;
-            // I do nothing
-        }
+        function ProductController() { }
     }
 
 })();

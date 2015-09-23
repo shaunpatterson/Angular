@@ -11,7 +11,6 @@
 
         vm.title = "Angular Skeleton";
         vm.subtitle = "Implement your products list on this page...";
-        vm.getProducts = getProducts;
         vm.removeProduct = removeProduct;
 
         activate();
