@@ -15,8 +15,7 @@
             scope: {
                 product: '='
             },
-            templateUrl: 'app/products/product.directive.view.html',
-            compile: compile
+            templateUrl: 'app/products/product.directive.view.html'
         };
         return directive;
 
@@ -25,11 +24,6 @@
             var vm = this;
             // I do nothing
         }
-
-        function compile(element, attrs, transclude) {
-            element.addClass('product');
-        }
-
     }
 
 })();

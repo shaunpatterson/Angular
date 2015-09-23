@@ -9,7 +9,7 @@
     function ProductsController($q, ProductsService, $log) {
         var vm = this;
 
-        vm.title = "Angular Developer Interview Skeleton";
+        vm.title = "Angular Skeleton";
         vm.subtitle = "Implement your products list on this page...";
 
         activate();
