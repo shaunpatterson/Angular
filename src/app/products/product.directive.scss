@@ -1,10 +1,20 @@
+ad-product > .row {
+    margin-bottom: 5px;
+    max-height: 150px;
+}
+
+
+ad-product img {
+    max-height: 148px;
+}
+
 ad-product .desc-pane {
     color: #828282;
 }
 
 ad-product .desc-pane .display-name {
     font-family: "Hoefler Text","Baskerville","Baskerville old face",Garamond,"Times New Roman",serif;
-    font-size: 1.5em;
+    font-size: 18px;
     font-weight: normal;
     font-style: italic;
 }
@@ -25,6 +35,7 @@ ad-product .desc-pane .price {
 }
 
 ad-product .options-pane {
+    height: 150px;
     padding: 1.4rem;
     font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 14px;
@@ -34,12 +45,22 @@ ad-product .options-pane {
 ad-product .options-pane .action {
     color: rgb(204, 51, 102);
     cursor: pointer;
-    display: block;
-    float: left;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     text-transform: uppercase;
 }
 
 ad-product .bold {
     font-weight: bold;
+}
+
+
+@media all and (max-width: 40em) {
+    ad-product .desc-pane { 
+        padding: 0;
+    }
+    ad-product .options-pane { 
+        font-size: 10px;
+        padding: 5px;
+    }
+
 }
