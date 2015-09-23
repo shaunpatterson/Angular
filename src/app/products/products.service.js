@@ -21,7 +21,7 @@
 
             function success(response) {
                 // Return just the array of products, not the entire object
-                return response.data['products'];
+                return response.data.products;
             }
 
             function failure() {
