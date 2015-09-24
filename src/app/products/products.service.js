@@ -21,9 +21,10 @@
              *  allow the use of the cache and transformResponse (to strip off "products") options of $http. Therefore
              *  I'm manually managing the cache */
 
-            if (internalCache.info().size > 0) {
+            var cachedData = internalCache.get('products');
+            if (cachedData) {
                 var deferred = $q.defer();
-                deferred.resolve(internalCache.get('products'));
+                deferred.resolve(cachedData);
                 return deferred.promise;
             } else {
                 return $http.get('/data/products.json')
