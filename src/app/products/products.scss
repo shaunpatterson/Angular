@@ -1,0 +1,21 @@
+.product-item.ng-enter,
+.product-item.ng-leave {
+    -webkit-transition:0.3s cubic-bezier(.17,.67,.83,.67) all;
+    transition: 0.3s cubic-bezier(.17,.67,.83,.67) all;
+}
+
+.product-item {
+    overflow: hidden;
+}
+
+.product-item.ng-enter,
+.product-item.ng-leave.ng-leave-active {
+    opacity: 0;
+    height: 0px;
+}
+
+.product-item.ng-leave,
+.product-item.ng-enter.ng-enter-active {
+    opacity: 1;
+    height: 150px;
+}
