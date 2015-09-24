@@ -10,7 +10,9 @@
     "lodash-angular-wrapper": "*"
   },
   "devDependencies": {
-    "angular-mocks": "~1.3.4"
+    "angular-mocks": "~1.3.4",
+    "bardjs": "^0.1.4",
+    "sinon": "http://sinonjs.org/releases/sinon-1.12.1.js"
   },
   "resolutions": {
     "angular": "~1.3.4"
