@@ -13,7 +13,7 @@
         <div class="twelve columns">Displaying {{results.length}} of {{products.products.length}}</div>
     </div>
     <div class="product-item" ng-repeat="p in products.products | filter: {displayName : vm.searchQuery} as results">
-        <ad-product product="::p" remove="products.removeProduct(product)"></ad-product>
+        <ad-product product="::p" remove="products.removeProduct(productId)"></ad-product>
     </div>
 
 </div>

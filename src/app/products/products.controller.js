@@ -30,8 +30,8 @@
             });
         }
 
-        function removeProduct(product) {
-            vm.products = ProductsService.removeProduct(product.id);
+        function removeProduct(productId) {
+            vm.products = ProductsService.removeProduct(productId);
         }
     }
 })();
