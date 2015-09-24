@@ -1,66 +1,64 @@
-ad-product > .row {
-    margin-bottom: 5px;
-    max-height: 150px;
-}
-
-
-ad-product img {
-    max-height: 148px;
-}
-
-ad-product .desc-pane {
-    color: #828282;
-}
-
-ad-product .desc-pane .display-name {
-    font-family: "Hoefler Text","Baskerville","Baskerville old face",Garamond,"Times New Roman",serif;
-    font-size: 18px;
-    font-weight: normal;
-    font-style: italic;
-}
-
-
-ad-product .desc-pane .style-number {
-    font-family: Verdana,Arial,Helvetica,Sans-serif;
-    font-size: 11px;
-    font-style: italic;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-ad-product .desc-pane .price {
-    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 18.8px;
-    color: rgb(61, 61, 61);
-}
-
-ad-product .options-pane {
-    height: 150px;
-    padding: 1.4rem;
-    font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    background: rgb(245, 244, 239);
-}
-
-ad-product .options-pane .action {
-    color: rgb(204, 51, 102);
-    cursor: pointer;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    text-transform: uppercase;
-}
-
-ad-product .bold {
-    font-weight: bold;
-}
-
-
-@media all and (max-width: 40em) {
-    ad-product .desc-pane { 
-        padding: 0;
+ad-product {
+    
+    > .row {
+        margin-bottom: 5px;
+        max-height: 150px;
     }
-    ad-product .options-pane { 
-        font-size: 10px;
-        padding: 5px;
+    
+    img {
+        max-height: 148px;
     }
 
+    .desc-pane {
+        color: #828282;
+        @media #{$small-only} { padding: 0; };
+
+        .display-name {
+            font-family: "Hoefler Text","Baskerville","Baskerville old face",Garamond,"Times New Roman",serif;
+            font-size: 18px;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .style-number {
+            font-family: Verdana,Arial,Helvetica,Sans-serif;
+            font-size: 11px;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price {
+            font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 18.8px;
+            color: rgb(61, 61, 61);
+        }
+    }
+
+    .options-pane {
+        height: 150px;
+        font-family: Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        background: rgb(245, 244, 239);
+
+        @media #{$small-only} { 
+            font-size: 10px;
+            padding: 5px; 
+        };
+
+        @media #{$medium-up} {
+            font-size: 14px;
+            padding: 1.4rem;
+        }
+
+        .action {
+            color: rgb(204, 51, 102);
+            cursor: pointer;
+            font-family: Verdana, Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+        }
+    }
+
+    .bold {
+        font-weight: bold;
+    }
 }
