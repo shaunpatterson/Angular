@@ -1,3 +1,32 @@
+.about-me {
+
+    margin-top: 25px;
+    margin-bottom: 25px;
+        
+
+    .avatar { 
+        max-height: 100px;
+    }
+
+    .desc {
+        font-family: $sans-serif-font-2;
+        color: rgb(61, 61, 61);
+        
+        h4 {
+            color: #828282;
+            font-size: rem-calc(15);
+        }
+
+        h5 {
+            color: #828282;
+            font-family: $sans-serif-font-1;
+            font-size: rem-calc(11);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    }
+}
+
 input {
     font-family: $sans-serif-font-2;
     text-transform: uppercase;
@@ -7,6 +36,8 @@ input {
 }
 
 .results {
+    color: #828282;
+    font-family: $sans-serif-font-2;
     @media #{$medium-up} {
         float: right;
     }
