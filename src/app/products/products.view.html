@@ -5,12 +5,17 @@
                 <h3>{{products.title}}</h3>
                 <h4>{{products.subtitle}}</h4>
 
-                <input ng-model="vm.searchQuery"></input>
         </div>
     </div>
 
     <div class="row">
-        <div class="twelve columns">Displaying {{results.length}} of {{products.products.length}}</div>
+        <div class="small-6 columns">
+            <input ng-model="vm.searchQuery" placeholder="Filter products..."></input>
+        </div>
+        <div class="small-6 columns">
+            <div class="results">Displaying {{results.length}} of {{products.products.length}}
+            </div>
+        </div>
     </div>
     <div class="product-item" ng-repeat="p in products.products | filter: {displayName : vm.searchQuery} as results">
         <ad-product product="::p" remove="products.removeProduct(productId)"></ad-product>
