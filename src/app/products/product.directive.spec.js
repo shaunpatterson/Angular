@@ -6,21 +6,24 @@
         var el;
         var product; 
         var scope;
-            
+        var timeout;
         
 
         beforeEach(function() { 
             module('angularDeveloper');
         });
 
-        beforeEach(inject(function($compile, $rootScope) {
+        beforeEach(inject(function($compile, $rootScope, $timeout) {
             product = getProduct();
 
-            el = angular.element('<ad-product product="product"/>');
+            el = angular.element('<ad-product product="product" remove="remove(productId)" />');
             
             scope = $rootScope;
             scope.product = product;
+            
             $compile(el)(scope);
+
+            timeout = $timeout;
 
             scope.$digest();
         }));
@@ -55,10 +58,13 @@
                 qtyElement = angular.element(spans[9]);
 
                 imgElement = angular.element(el.find('img')[0]);
+                removeButton = angular.element(el.find('a')[0]);
+                    
+                var e = jasmine.createSpyObj('e', [ 'preventDefault' ]);
+                removeButton.triggerHandler('click', [e]);
 
             });
 
-        
             it('should render the correct values', function() {
                 expect(displayNameElement.text()).toEqual(product.displayName);
                 expect(styleElement.text()).toEqual("STYLE: " + product.styleNumber);
@@ -67,6 +73,18 @@
                 expect(colorElement.text()).toEqual(''+product.color);
                 expect(sizeElement.text()).toEqual(''+product.size);
                 expect(qtyElement.text()).toEqual(String(product.quantity));
+            });
+
+            it('should call remove function when remove button clicked', function() {
+                var spy = jasmine.createSpy();
+                
+                scope.remove = spy;
+                scope.$digest();
+
+                removeButton.triggerHandler('click');
+
+                expect(spy).toHaveBeenCalled();
+                expect(spy).toHaveBeenCalledWith(product.id);
             });
 
         });
