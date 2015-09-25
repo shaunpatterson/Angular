@@ -23,8 +23,8 @@
 
             $scope.symbol = $locale.NUMBER_FORMATS.CURRENCY_SYM;
 
-            var currency = $filter('currency')($scope.price, '', 2).split($locale.NUMBER_FORMATS.DECIMAL_SEP)
-            $scope.dollars = currency[0]
+            var currency = $filter('currency')($scope.price, '', 2).split($locale.NUMBER_FORMATS.DECIMAL_SEP);
+            $scope.dollars = currency[0];
             $scope.cents = currency[1];
         }
     }
