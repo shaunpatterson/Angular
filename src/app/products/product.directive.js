@@ -3,10 +3,10 @@
 
     angular
         .module('angularDeveloper')
-        .directive('adProduct', adProduct);
+        .directive('adProduct', ProductDirective);
 
     /* @ngInject */
-    function adProduct() {
+    function ProductDirective() {
         var directive = {
             bindToController: true,
             controller: ProductController,

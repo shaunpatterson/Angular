@@ -33,9 +33,24 @@ ad-product {
         }
 
         .price {
-            font-family: $sans-serif-font-2;
+            font-family: $sans-serif-font-1;
             font-size: rem-calc(18);
             color: rgb(61, 61, 61);
+
+            .symbol {
+            }
+
+            .dollars {
+                font-size: rem-calc(24);
+                /*font-weight: bold;*/
+            }
+
+            .cents {
+                font-family: $sans-serif-font-2;
+                font-size: rem-calc(13);
+                vertical-align: text-top;
+            }
+
         }
     }
 
