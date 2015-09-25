@@ -19,9 +19,13 @@
 
         /* @ngInject */
         function PrettyPriceController($scope) {
+            /** Note: This only works for countries that use the symbol first and . as their decimal separator */
+
             $scope.symbol = $locale.NUMBER_FORMATS.CURRENCY_SYM;
-            $scope.dollars = $filter('currency')($scope.price, '', 0);
-            $scope.cents = "00";
+
+            var currency = $filter('currency')($scope.price, '', 2).split($locale.NUMBER_FORMATS.DECIMAL_SEP)
+            $scope.dollars = currency[0]
+            $scope.cents = currency[1];
         }
     }
 
